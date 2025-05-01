@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package stringprocessor;
+
+service StringService {
+    rpc Process (StringRequest) returns (StringResponse);
+}
+
+message StringRequest {
+    string text = 1;
+}
+
+message StringResponse {
+    string result = 1;
+}

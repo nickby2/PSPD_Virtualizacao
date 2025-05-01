@@ -1,0 +1,14 @@
+setup.py
+distributed_string_processor.egg-info/PKG-INFO
+distributed_string_processor.egg-info/SOURCES.txt
+distributed_string_processor.egg-info/dependency_links.txt
+distributed_string_processor.egg-info/requires.txt
+distributed_string_processor.egg-info/top_level.txt
+grpc_stub/__init__.py
+grpc_stub/client.py
+grpc_stub/string_processor_pb2.py
+grpc_stub/string_processor_pb2_grpc.py
+grpc_stub/web_server.py
+grpc_stub/templates/index.html
+proto/__init__.py
+proto/string_processor.proto

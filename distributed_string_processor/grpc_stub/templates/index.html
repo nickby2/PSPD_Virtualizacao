@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distributed String Processor</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .container { margin-top: 50px; }
+        form { margin-bottom: 20px; }
+        input[type="text"] { width: 100%; padding: 8px; }
+        button { padding: 8px 15px; background: #0066cc; color: white; border: none; }
+        .result { margin-top: 20px; padding: 15px; background: #f5f5f5; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Distributed String Processor</h1>
+        <form method="post" action="/process">
+            <input type="text" name="text" placeholder="Enter a string" required>
+            <button type="submit">Process</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <strong>Original:</strong> {{ original }}<br>
+            <strong>Processed:</strong> {{ result }}
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error">
+            <strong>Error:</strong> {{ error }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
