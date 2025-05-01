@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: distributed_string_processor
+Version: 0.1
+Requires-Dist: grpcio>=1.58.0
+Requires-Dist: protobuf>=3.20.3
+Requires-Dist: fastapi>=0.95.2
+Requires-Dist: uvicorn>=0.18.3
+Dynamic: requires-dist
