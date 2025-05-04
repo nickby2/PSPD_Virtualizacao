@@ -1,0 +1,4 @@
+[
+  "test_client.py::test_dummy_client",
+  "test_web_server.py::test_dummy_web"
+]
