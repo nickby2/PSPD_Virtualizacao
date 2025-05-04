@@ -32,26 +32,51 @@ make clean  # Limpeza prévia
 make all    # Compila server_a e server_b
 ```
 
-## **Execução**
+## Instalação e Execução
 
-### **1. Iniciar Servidores**
-Em **terminais separados**:
+### Pré-requisitos
+- Python 3.8+
+- `make` (opcional para compilação dos servidores C++)
 
-#### Servidor A (Uppercase)
+### Instalação Automática
 ```bash
-./server_a
+/PSPD_Virtualizacao/distributed_string_processor$ 
+chmod +x install.sh
+./install.sh
 ```
 
-#### Servidor B (Reverse)
-```bash
-./server_b
-```
+### Execução Manual
+1. **Servidores C++** (em terminais separados):
+   ```bash
+   # Servidor A (Uppercase)
+   /PSPD_Virtualizacao/distributed_string_processor$ 
+   ./server_a
 
-### **2. Iniciar Interface Web**
-```bash
-cd grpc_stub
-uvicorn web_server:app --reload
-```
+   # Servidor B (Reverse)
+   /PSPD_Virtualizacao/distributed_string_processor$ 
+   ./server_b
+   ```
+
+2. **Servidor Web**:
+   ```bash
+   /PSPD_Virtualizacao/distributed_string_processor$ 
+   cd grpc_stub
+   uvicorn web_server:app --reload
+   ```
+
+3. **Acesse a aplicação**:
+   ```
+   http://localhost:8000
+   ```
+
+### Dependências Principais
+| Pacote         | Versão  |
+|----------------|---------|
+| grpcio         | 1.58.0  |
+| protobuf       | 3.20.3  |
+| fastapi        | 0.95.2  |
+| uvicorn        | 0.21.1  |
+| Jinja2         | 3.1.2   |
 
 Acesse no navegador:  
 🔗 [http://localhost:8000](http://localhost:8000)
